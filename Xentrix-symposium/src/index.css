@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFFFFF; /* Pure White Base */
+    color: #111111; /* Rich Black */
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Cinzel', serif;
+  }
+
+  h4, h5, .font-subheading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-number {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Hide scrollbars for horizontal rows while preserving scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Luxury Maroon & Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDF2F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6D071A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C89B3C;
+}
+
+/* Engineering Blueprint Background Grid */
+.blueprint-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(109, 7, 26, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 7, 26, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Gear animation fallback */
+@keyframes spinGear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-gear {
+  animation: spinGear 12s linear infinite;
+}
+
+.animate-gear-reverse {
+  animation: spinGear 16s linear infinite reverse;
+}
+
+/* Sparkling Shimmer Button Effect (Maroon & Rich Gold) */
+@keyframes sparklingShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sparkling-btn {
+  background: linear-gradient(110deg, #6D071A, #C89B3C, #8E0922, #C89B3C, #6D071A);
+  background-size: 250% 250%;
+  animation: sparklingShimmer 3s ease infinite;
+}
+
